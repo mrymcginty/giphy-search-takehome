@@ -1,0 +1,77 @@
+@use "src/variables" as vars;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,600&display=swap");
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root,
+body {
+  @extend .poppins-semibold;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+
+body {
+  background-color: vars.$color-bg;
+  color: vars.$color-base-light;
+  position: relative;
+}
+h1 {
+  color: vars.$color-base-light;
+}
+a {
+  color: vars.$color-brand-yellow;
+}
+
+.page-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.button {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: vars.$color-brand-yellow;
+  color: vars.$color-base-dark;
+  border: none;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 25px;
+  padding: 0 25px 0 20px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  svg {
+    margin-right: 5px;
+    transition: all 0.5s;
+  }
+  &-yellow {
+    background-color: vars.$color-brand-yellow;
+  }
+  &-purple {
+    background-color: vars.$color-brand-purple;
+    color: vars.$color-base-light;
+  }
+  &-blue {
+    background-color: vars.$color-brand-blue;
+    color: vars.$color-base-light;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}

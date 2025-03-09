@@ -1,0 +1,13 @@
+.results-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  columns: 200px;
+  column-gap: 1em;
+  > div {
+    margin-bottom: 1em;
+  }
+  &.items-1 {
+    // set to 1 column layout when we have one item in our loading skeleton
+    columns: auto;
+  }
+}

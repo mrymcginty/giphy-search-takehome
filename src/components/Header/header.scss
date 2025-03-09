@@ -1,0 +1,50 @@
+@use "src/variables" as vars;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media only screen and (max-width: vars.$mobile-breakpoint) {
+    display: block;
+  }
+
+  h1 {
+    a {
+      color: vars.$color-base-light;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        color: vars.$color-bg;
+        border-radius: 50%;
+        transition: all 0.3s;
+        background: linear-gradient(
+          vars.$color-brand-blue,
+          vars.$color-brand-purple,
+          vars.$color-brand-green,
+          vars.$color-brand-yellow,
+          vars.$color-brand-red
+        );
+      }
+      &:hover {
+        svg {
+          transform: rotate(-15deg);
+        }
+      }
+    }
+  }
+
+  &-nav {
+    a {
+      &.hasItems {
+        background-color: vars.$color-brand-green;
+      }
+    }
+  }
+}

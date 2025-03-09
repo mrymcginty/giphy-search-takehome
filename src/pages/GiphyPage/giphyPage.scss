@@ -1,0 +1,12 @@
+.page-giphy {
+  max-width: 500px;
+  margin: 40px auto;
+
+  .info {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 5px;
+    }
+  }
+}
